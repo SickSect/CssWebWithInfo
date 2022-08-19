@@ -1,12 +1,32 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700,900&subset=cyrillic");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=cyrillic');
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
     position: relative;
     font-family: "Montserrat", sans-serif;
     font-size: 7em;
     font-weight: 700;
 }
+
+h2 {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9em;
+    font-weight: 700;
+}
+
+p {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 3em;
+    font-weight: 500;
+}
+
 
 @keyframes header_1_anim {
     from {
@@ -21,7 +41,7 @@ h1 {
     display: flex;
     min-height: 10vh;
     padding: 80px 50px;
-    background-color: aquamarine;
+    background-color: bisque;
 }
 
 .header_title {
@@ -30,10 +50,68 @@ h1 {
     animation-duration: 1s;
     animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
     text-transform: uppercase;
+    color: white;
     align-self: center;
 }
 
 .article {
     position: relative;
+    min-height: 100vh;
+    padding: 8px 50px;
 }
 
+.article_aquamarine_bg::before,
+.article_white_bg::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content:'';
+}
+
+.article_aquamarine_bg::before{
+    background-color: aquamarine;
+}
+
+.article_white_bg::before{
+    background-color: bisque;
+}
+
+.article_first,
+.article_second{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.form {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.form_input,
+.form_textarea{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 16px;
+    margin-top: 8px;
+    padding: 8px 10px;
+    transition: transform 0.3s ease-out;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: bisque;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+
+.skills {
+    color: white;
+    box-sizing: border-box;
+}
